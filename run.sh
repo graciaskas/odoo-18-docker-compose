@@ -4,11 +4,11 @@ PORT=$2
 CHAT=$3
 
 # Clone Odoo directory
-git clone --depth=1 https://github.com/minhng92/odoo-18-docker-compose $DESTINATION
-rm -rf $DESTINATION/.git
+sudo git clone --depth=1 https://github.com/minhng92/odoo-18-docker-compose $DESTINATION
+sudo rm -rf $DESTINATION/.git
 
 # Create PostgreSQL directory
-mkdir -p $DESTINATION/postgresql
+sudo mkdir -p $DESTINATION/postgresql
 
 # Change ownership to current user and set restrictive permissions for security
 sudo chown -R $USER:$USER $DESTINATION
